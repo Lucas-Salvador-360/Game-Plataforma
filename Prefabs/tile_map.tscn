@@ -1,9 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://ex6kdadp18vf"]
 
-[ext_resource type="Texture2D" uid="uid://pi1re5s2u827" path="res://Sprites/Sprites/Terrain/Terrain (16x16).png" id="1_a8oek"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h4grl"]
+load_path = "res://.godot/imported/Terrain (16x16).png-116320c0af31d913b00c0668d0afb510.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o6drs"]
-texture = ExtResource("1_a8oek")
+texture = SubResource("CompressedTexture2D_h4grl")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0

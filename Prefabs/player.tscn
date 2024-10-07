@@ -1,132 +1,144 @@
 [gd_scene load_steps=41 format=3 uid="uid://b6ke2ij8fc6jh"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_gxuv6"]
-[ext_resource type="Texture2D" uid="uid://du5da3ctbk3cr" path="res://Sprites/Sprites/Main Characters/Virtual Guy/Idle (32x32).png" id="2_ije0s"]
-[ext_resource type="Texture2D" uid="uid://bw264qfa30h5x" path="res://Sprites/Sprites/Other/Shadow.png" id="2_u8ugs"]
-[ext_resource type="Texture2D" uid="uid://cu514f5q0r18s" path="res://Sprites/Sprites/Main Characters/Virtual Guy/Run (32x32).png" id="3_6r7aa"]
-[ext_resource type="Texture2D" uid="uid://cb2ekkpd0lpdo" path="res://Sprites/Sprites/Main Characters/Virtual Guy/Double Jump (32x32).png" id="3_a5vv8"]
-[ext_resource type="Texture2D" uid="uid://cxccqcvewqo01" path="res://Sprites/Sprites/Main Characters/Virtual Guy/Jump (32x32).png" id="3_j8ry5"]
-[ext_resource type="Texture2D" uid="uid://bjhtn2wwbeyii" path="res://Sprites/Sprites/Main Characters/Virtual Guy/Fall (32x32).png" id="4_yfp7c"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k3yja"]
+load_path = "res://.godot/imported/Shadow.png-107d29f1c09d89d7be58d5259c57f457.ctex"
 
 [sub_resource type="Gradient" id="Gradient_kyfbk"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.768627)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iwmlo"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u58bq"]
+load_path = "res://.godot/imported/Double Jump (32x32).png-f836227399387925b4bfdec0d41a323a.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ugjrd"]
-atlas = ExtResource("3_a5vv8")
+atlas = SubResource("CompressedTexture2D_u58bq")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fv38d"]
-atlas = ExtResource("3_a5vv8")
+atlas = SubResource("CompressedTexture2D_u58bq")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rh1og"]
-atlas = ExtResource("3_a5vv8")
+atlas = SubResource("CompressedTexture2D_u58bq")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oumtt"]
-atlas = ExtResource("3_a5vv8")
+atlas = SubResource("CompressedTexture2D_u58bq")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r6w7k"]
-atlas = ExtResource("3_a5vv8")
+atlas = SubResource("CompressedTexture2D_u58bq")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_unk1u"]
-atlas = ExtResource("3_a5vv8")
+atlas = SubResource("CompressedTexture2D_u58bq")
 region = Rect2(160, 0, 32, 32)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h3nfh"]
+load_path = "res://.godot/imported/Fall (32x32).png-1d2a9f2f8940ff79f061f5dc9e168515.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uif5c"]
+load_path = "res://.godot/imported/Idle (32x32).png-6288c8c9f60ad3f9ef3050fd410f8f5f.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_h0f5q"]
-atlas = ExtResource("2_ije0s")
+atlas = SubResource("CompressedTexture2D_uif5c")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gtler"]
-atlas = ExtResource("2_ije0s")
+atlas = SubResource("CompressedTexture2D_uif5c")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dif5o"]
-atlas = ExtResource("2_ije0s")
+atlas = SubResource("CompressedTexture2D_uif5c")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1h1gu"]
-atlas = ExtResource("2_ije0s")
+atlas = SubResource("CompressedTexture2D_uif5c")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ikjp"]
-atlas = ExtResource("2_ije0s")
+atlas = SubResource("CompressedTexture2D_uif5c")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e00ps"]
-atlas = ExtResource("2_ije0s")
+atlas = SubResource("CompressedTexture2D_uif5c")
 region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_51q8d"]
-atlas = ExtResource("2_ije0s")
+atlas = SubResource("CompressedTexture2D_uif5c")
 region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ut2n"]
-atlas = ExtResource("2_ije0s")
+atlas = SubResource("CompressedTexture2D_uif5c")
 region = Rect2(224, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yahas"]
-atlas = ExtResource("2_ije0s")
+atlas = SubResource("CompressedTexture2D_uif5c")
 region = Rect2(256, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b7rby"]
-atlas = ExtResource("2_ije0s")
+atlas = SubResource("CompressedTexture2D_uif5c")
 region = Rect2(288, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xs04w"]
-atlas = ExtResource("2_ije0s")
+atlas = SubResource("CompressedTexture2D_uif5c")
 region = Rect2(320, 0, 32, 32)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nc1kf"]
+load_path = "res://.godot/imported/Jump (32x32).png-603ad98aed195ca179fa2c4e68918578.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3htoq"]
+load_path = "res://.godot/imported/Run (32x32).png-4c81a5a4dbb7e82292f574e654aa084a.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2cap"]
-atlas = ExtResource("3_6r7aa")
+atlas = SubResource("CompressedTexture2D_3htoq")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pwbha"]
-atlas = ExtResource("3_6r7aa")
+atlas = SubResource("CompressedTexture2D_3htoq")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ajhu"]
-atlas = ExtResource("3_6r7aa")
+atlas = SubResource("CompressedTexture2D_3htoq")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rvjgc"]
-atlas = ExtResource("3_6r7aa")
+atlas = SubResource("CompressedTexture2D_3htoq")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4cl8h"]
-atlas = ExtResource("3_6r7aa")
+atlas = SubResource("CompressedTexture2D_3htoq")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nigsg"]
-atlas = ExtResource("3_6r7aa")
+atlas = SubResource("CompressedTexture2D_3htoq")
 region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7moqe"]
-atlas = ExtResource("3_6r7aa")
+atlas = SubResource("CompressedTexture2D_3htoq")
 region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_05tno"]
-atlas = ExtResource("3_6r7aa")
+atlas = SubResource("CompressedTexture2D_3htoq")
 region = Rect2(224, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xubav"]
-atlas = ExtResource("3_6r7aa")
+atlas = SubResource("CompressedTexture2D_3htoq")
 region = Rect2(256, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2tlhx"]
-atlas = ExtResource("3_6r7aa")
+atlas = SubResource("CompressedTexture2D_3htoq")
 region = Rect2(288, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3i85f"]
-atlas = ExtResource("3_6r7aa")
+atlas = SubResource("CompressedTexture2D_3htoq")
 region = Rect2(320, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e6ja1"]
-atlas = ExtResource("3_6r7aa")
+atlas = SubResource("CompressedTexture2D_3htoq")
 region = Rect2(352, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_btvkg"]
@@ -151,7 +163,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_unk1u")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_yfp7c")
+"texture": SubResource("CompressedTexture2D_h3nfh")
 }],
 "loop": true,
 "name": &"DoubleJump",
@@ -197,13 +209,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_j8ry5")
+"texture": SubResource("CompressedTexture2D_nc1kf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_j8ry5")
+"texture": SubResource("CompressedTexture2D_nc1kf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_yfp7c")
+"texture": SubResource("CompressedTexture2D_h3nfh")
 }],
 "loop": true,
 "name": &"Jump",
@@ -260,7 +272,7 @@ script = ExtResource("1_gxuv6")
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 position = Vector2(1, 12)
 lifetime_randomness = 1.0
-texture = ExtResource("2_u8ugs")
+texture = SubResource("CompressedTexture2D_k3yja")
 gravity = Vector2(0, -6)
 angle_max = 360.0
 scale_amount_min = 0.2
@@ -273,7 +285,7 @@ amount = 20
 explosiveness = 1.0
 randomness = 1.0
 lifetime_randomness = 1.0
-texture = ExtResource("2_u8ugs")
+texture = SubResource("CompressedTexture2D_k3yja")
 spread = 180.0
 gravity = Vector2(0, 0)
 initial_velocity_min = 40.0

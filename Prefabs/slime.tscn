@@ -1,0 +1,148 @@
+[gd_scene load_steps=21 format=3 uid="uid://de2f1r1u3u82w"]
+
+[ext_resource type="Script" path="res://Scripts/slime.gd" id="1_h2xev"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sytm7"]
+load_path = "res://.godot/imported/Hit (44x30).png-a76309a13a1e43c6c2fe1f6360aea7e2.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2r4uy"]
+atlas = SubResource("CompressedTexture2D_sytm7")
+region = Rect2(0, 0, 44, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrgot"]
+atlas = SubResource("CompressedTexture2D_sytm7")
+region = Rect2(44, 0, 44, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kijni"]
+atlas = SubResource("CompressedTexture2D_sytm7")
+region = Rect2(88, 0, 44, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3ism"]
+atlas = SubResource("CompressedTexture2D_sytm7")
+region = Rect2(132, 0, 44, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1wxd"]
+atlas = SubResource("CompressedTexture2D_sytm7")
+region = Rect2(176, 0, 44, 30)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dio72"]
+load_path = "res://.godot/imported/Idle-Run (44x30).png-e7d960041198f4a775d6ca89de0447b2.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o28op"]
+atlas = SubResource("CompressedTexture2D_dio72")
+region = Rect2(0, 0, 44, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oob2g"]
+atlas = SubResource("CompressedTexture2D_dio72")
+region = Rect2(44, 0, 44, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqc6m"]
+atlas = SubResource("CompressedTexture2D_dio72")
+region = Rect2(88, 0, 44, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0k18l"]
+atlas = SubResource("CompressedTexture2D_dio72")
+region = Rect2(132, 0, 44, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgjva"]
+atlas = SubResource("CompressedTexture2D_dio72")
+region = Rect2(176, 0, 44, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fa23"]
+atlas = SubResource("CompressedTexture2D_dio72")
+region = Rect2(220, 0, 44, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8uac"]
+atlas = SubResource("CompressedTexture2D_dio72")
+region = Rect2(264, 0, 44, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24162"]
+atlas = SubResource("CompressedTexture2D_dio72")
+region = Rect2(308, 0, 44, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j65u8"]
+atlas = SubResource("CompressedTexture2D_dio72")
+region = Rect2(352, 0, 44, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcvyj"]
+atlas = SubResource("CompressedTexture2D_dio72")
+region = Rect2(396, 0, 44, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hmy1s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2r4uy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xrgot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kijni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3ism")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1wxd")
+}],
+"loop": false,
+"name": &"Hit",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o28op")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oob2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqc6m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0k18l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgjva")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fa23")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u8uac")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24162")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j65u8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mcvyj")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 14.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cfea6"]
+radius = 13.1529
+
+[node name="Slime" type="CharacterBody2D" groups=["Slime"]]
+script = ExtResource("1_h2xev")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_hmy1s")
+animation = &"Hit"
+autoplay = "Idle"
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_cfea6")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

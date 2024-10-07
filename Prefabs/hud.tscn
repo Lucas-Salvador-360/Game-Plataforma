@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://ci7i0ok0j71vm"]
+[gd_scene load_steps=5 format=3 uid="uid://ci7i0ok0j71vm"]
 
 [ext_resource type="Script" path="res://Scripts/hud.gd" id="1_lv56v"]
-[ext_resource type="Texture2D" uid="uid://cxccqcvewqo01" path="res://Sprites/Sprites/Main Characters/Virtual Guy/Jump (32x32).png" id="2_hc1vj"]
-[ext_resource type="Texture2D" uid="uid://bhvbjaphrrxfn" path="res://Sprites/Sprites/Items/Fruits/Kiwi.png" id="3_ko5il"]
+[ext_resource type="FontFile" uid="uid://bgfy6dl41t6g5" path="res://Fonts/DePixelBreitFett.otf" id="2_mmu8v"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nc1kf"]
+load_path = "res://.godot/imported/Jump (32x32).png-603ad98aed195ca179fa2c4e68918578.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hcoy8"]
+load_path = "res://.godot/imported/Kiwi.png-e4f4e591f3352df9a083a600b5b892fe.ctex"
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_lv56v")
@@ -12,8 +17,8 @@ position = Vector2(13, 23)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Life"]
-position = Vector2(15, -8)
-texture = ExtResource("2_hc1vj")
+position = Vector2(13, -13)
+texture = SubResource("CompressedTexture2D_nc1kf")
 region_enabled = true
 region_rect = Rect2(3, 1, 29, 19)
 
@@ -22,6 +27,12 @@ offset_left = 33.0
 offset_top = -18.0
 offset_right = 73.0
 offset_bottom = 5.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("2_mmu8v")
+theme_override_font_sizes/font_size = 10
 text = "3
 "
 
@@ -30,16 +41,22 @@ position = Vector2(416, 19)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Score"]
-position = Vector2(47, -1)
+position = Vector2(51, -6)
 scale = Vector2(1.25, 1.27778)
-texture = ExtResource("3_ko5il")
+texture = SubResource("CompressedTexture2D_hcoy8")
 region_enabled = true
 region_rect = Rect2(8, 7, 20, 18)
 
 [node name="ScoreText" type="Label" parent="Score"]
 offset_left = 15.0
 offset_top = -13.0
-offset_right = 55.0
-offset_bottom = 10.0
+offset_right = 40.0
+offset_bottom = 5.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("2_mmu8v")
+theme_override_font_sizes/font_size = 10
 text = "0
 "
