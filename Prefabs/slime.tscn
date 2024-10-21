@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://de2f1r1u3u82w"]
+[gd_scene load_steps=22 format=3 uid="uid://de2f1r1u3u82w"]
 
 [ext_resource type="Script" path="res://Scripts/slime.gd" id="1_h2xev"]
 
@@ -129,12 +129,15 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_cfea6"]
 radius = 13.1529
 
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_rsp6d"]
+length = 18.9966
+
 [node name="Slime" type="CharacterBody2D" groups=["Slime"]]
 script = ExtResource("1_h2xev")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hmy1s")
-animation = &"Hit"
+animation = &"Idle"
 autoplay = "Idle"
 metadata/_edit_lock_ = true
 
@@ -145,4 +148,17 @@ shape = SubResource("CircleShape2D_cfea6")
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2.38419e-07, 4)
+rotation = 1.55545
+shape = SubResource("SeparationRayShape2D_rsp6d")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-7.45058e-09, 4)
+rotation = -1.5519
+shape = SubResource("SeparationRayShape2D_rsp6d")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

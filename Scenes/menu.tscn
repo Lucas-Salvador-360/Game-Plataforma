@@ -1,3 +1,27 @@
-[gd_scene format=3 uid="uid://kqcdpgik5l4p"]
+[gd_scene load_steps=2 format=3 uid="uid://kqcdpgik5l4p"]
+
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_oa1ax"]
 
 [node name="Menu" type="Node"]
+script = ExtResource("1_oa1ax")
+
+[node name="PLAY" type="Button" parent="."]
+texture_filter = 2
+texture_repeat = 2
+offset_left = 171.0
+offset_top = 116.0
+offset_right = 265.0
+offset_bottom = 155.0
+text = "PLAY"
+
+[node name="CONTINUE" type="Button" parent="."]
+texture_filter = 2
+texture_repeat = 2
+offset_left = 173.0
+offset_top = 161.0
+offset_right = 264.0
+offset_bottom = 198.0
+text = "CONTINUE"
+
+[connection signal="pressed" from="PLAY" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CONTINUE" to="." method="_on_button_2_pressed"]
