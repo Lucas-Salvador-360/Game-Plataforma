@@ -209,10 +209,10 @@ motion_scale = Vector2(0.3, 0.3)
 motion_offset = Vector2(0.3, 0)
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
-offset_left = -656.0
-offset_top = -796.0
-offset_right = 6413.0
-offset_bottom = 412.0
+offset_left = -629.0
+offset_top = -601.0
+offset_right = 6440.0
+offset_bottom = 607.0
 texture = ExtResource("6_bomae")
 stretch_mode = 1
 
